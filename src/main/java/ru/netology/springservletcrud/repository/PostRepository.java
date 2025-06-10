@@ -1,10 +1,12 @@
 package ru.netology.springservletcrud.repository;
 
+import org.springframework.stereotype.Service;
 import ru.netology.springservletcrud.model.Post;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
+@Service
 public class PostRepository {
   private final Map<Long, Post> posts = new ConcurrentHashMap<>();
   private final AtomicLong counter = new AtomicLong();
